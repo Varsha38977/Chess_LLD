@@ -17,8 +17,14 @@ If you have already played it already then you might already know this. But to e
 * Pawn: It can move 1 step forward vertically. If it is its first turn, then it can also choose to make 2 steps in single move.  
   Note: All pieces except Knight cannot jump any other piece. Knight can jump over other pieces.
 
-## Expectations
+## Technical Expectations
 * Code should be functionally correct.
 * Code should be modular and readable. Clean and professional level code.
 * Code should be extesible and scalable. Means it should be able to accomodate new requirements with minimal changes.
 * Code should have good OOPs design.
+
+## Technical Expectations 
+* Pawns should be converted into Queen if they reach the last row. 
+* Stalemate should be handled.
+* Chequemate should result in winning the game.
+* Castling can be handled as extension to this problem.
