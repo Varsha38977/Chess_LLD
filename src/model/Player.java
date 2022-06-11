@@ -16,13 +16,17 @@ public class Player {
         uniqueId = UUID.randomUUID();
     }
 
-    public boolean isWhiteSide()
-    {
-        return this.isWhite;
+    public String getId() {
+        return this.id;
     }
 
     public UUID getUniqueId() {
         return this.uniqueId;
+    }
+
+    public boolean isWhiteSide()
+    {
+        return this.isWhite;
     }
 
     @Override

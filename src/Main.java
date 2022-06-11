@@ -3,6 +3,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
+import model.GameStatus;
 import model.Player;
 import service.GameManager;
 
@@ -24,6 +25,10 @@ public class Main {
                         Integer.valueOf(inputSplit[4]))) {
                     System.out.printf("Varsha moved from %s %s to %s %s %n",inputSplit[1],
                             inputSplit[2], inputSplit[3], inputSplit[4]);
+                    GameStatus status = gameManager.getGameStatus();
+                    if (!status.equals(GameStatus.ACTIVE)) {
+                        System.exit(0);
+                    }
                 } else {
                     System.out.printf("Invalid move of Varsha from %s %s to %s %s %n",inputSplit[1],
                             inputSplit[2], inputSplit[3], inputSplit[4]);
@@ -35,6 +40,10 @@ public class Main {
                         Integer.valueOf(inputSplit[4]))) {
                     System.out.printf("Akshita moved from %s %s to %s %s %n",inputSplit[1],
                             inputSplit[2], inputSplit[3], inputSplit[4]);
+                    GameStatus status = gameManager.getGameStatus();
+                    if (!status.equals(GameStatus.ACTIVE)) {
+                        System.exit(0);
+                    }
                 } else {
                     System.out.printf("Invalid move of Akshita from %s %s to %s %s %n",inputSplit[1],
                             inputSplit[2], inputSplit[3], inputSplit[4]);
